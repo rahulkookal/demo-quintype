@@ -36,7 +36,8 @@ class App extends Component {
             </div>
             <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 no-padding">
                 <div className="story-title">
-                <span className="line-copy">{sectionName}</span></div>
+                    <span className="line-copy">{sectionName}</span>
+                </div>
                 <div className="story-headline">{headLine}</div>
                 <div className="story-description">{headLine}</div>
                 <div className="auther-details row">
