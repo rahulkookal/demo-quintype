@@ -1,5 +1,3 @@
-import {api } from '../actions/api'
-
 export const REQUEST_POSTS = 'REQUEST_POSTS'
 export const RECEIVE_POSTS = 'RECEIVE_POSTS'
 export const SELECT_REDDIT = 'SELECT_REDDIT'
@@ -13,21 +11,13 @@ export const requestStories = stories => ({
 
 
 export const loadStories = () => dispatch => {
-    console.log(api);
-
-    dispatch(requestStories(api.stories))
-    // return fetch(`https://rio.quintype.io/api/v1/stories`,
-    //     { mode:'no-cors'})
-    //     .then(response => response.json())
-    //     .then(json => dispatch(receivePosts(json)))
-    //     .catch((e)=> console.log(e))
-    // fetch({ url:'https://rio.quintype.io/api/v1/stories',
-    //         mode:'cors',
-    //         dataType: "text"})
-    //     .then(function(response) {
-    //         console.log(response)
-    //         return response.json()
-    //     }).catch((e)=>console.log(e))
+    //Should be replace with hosting proxy server server
+    let proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+        targetUrl = `https://rio.quintype.io/api/v1/stories`
+    return fetch(proxyUrl + targetUrl)
+        .then(response => response.json())
+        .then(json => dispatch(requestStories(json.stories)))
+        .catch( e => console.log(e))
 }
 
 

@@ -1,15 +1,11 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+//import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import {loadStories } from '../actions'
+import SecondRowStories from './SecondRowStories.container'
 
 class App extends Component {
   static propTypes = {
-      string: PropTypes.string.isRequired,
-      array: PropTypes.array.isRequired,
-      bool: PropTypes.bool.isRequired,
-      number: PropTypes.number,
-      dispatch: PropTypes.func.isRequired
   }
 
   componentDidMount() {
@@ -31,7 +27,7 @@ class App extends Component {
   }
 
   render() {
-    const { imgSrc} = this.props
+    const { imgSrc, headLine, sectionName, authorName, publishedAt} = this.props
     return (
     <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 no-padding">
         <div className="row no-margin main-article">
@@ -39,20 +35,33 @@ class App extends Component {
                 <img alt="" src={imgSrc} className="main-article-img"></img>
             </div>
             <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 no-padding">
-                <div className="story-title">Science</div>
-                <div className="line-copy"></div>
-                <div className="story-description">aaaa</div>
+                <div className="story-title">
+                <span className="line-copy">{sectionName}</span></div>
+                <div className="story-headline">{headLine}</div>
+                <div className="story-description">{headLine}</div>
+                <div className="auther-details row">
+                    <div className="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 no-padding">
+                        <img alt="" className="search-img" src="img/search-blue.png" srcset="img/search-blue@2x.png 1000w, img/search-blue@3x.png 2000w"></img>
+                    </div>
+                    <div className="auther-name">{authorName}<br/>
+                        <span className="posted-details">Posted {publishedAt}</span>
+                    </div>
+                </div>
             </div>
         </div>
+        <SecondRowStories></SecondRowStories>
     </div>
     )
   }
 }
 
 const mapStateToProps = state => {
-  console.log(state)
   return {
-      imgSrc:'http://quintype-01.imgix.net/' + state.mainArticle['hero-image-s3-key']
+      imgSrc:'http://quintype-01.imgix.net/' + state.mainArticle['hero-image-s3-key'],
+      headLine: state.mainArticle['headline'],
+      sectionName: !!state.mainArticle['sections']?state.mainArticle['sections'][0].name:'',
+      authorName: state.mainArticle['author-name'],
+      publishedAt: new Date(state.mainArticle['published-at']).getDay()
   }
 }
 
