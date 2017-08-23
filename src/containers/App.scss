@@ -1,0 +1,58 @@
+.must-reads{
+  margin-top: 2% !important;
+  text-align: center;
+  background-color: brown;
+  .title{
+    padding: 2% 0 0 0;
+    font-family: Lato;
+    font-size: 34px;
+    font-weight: bold;
+    letter-spacing: -0.3px;
+    text-align: center;
+    color: #ffffff;
+  }
+  .description{
+    padding: 2% 0 2% 0;
+    font-family: Lato;
+    font-size: 38px;
+    line-height: 1.32;
+    text-align: center;
+    color: #ffffff;
+    .left_arrow{
+      float: left;
+      padding-left: 2%;
+    }
+    .right_arrow{
+      float: right;
+      padding-right: 2%;
+    }
+  }
+  .button-div{
+    padding: 2% 0px 2% 0px;
+    button {
+      padding: 1% 1% 1% 1%;
+      border-radius: 100px;
+      border: solid 1.5px #ffffff;
+      background-color: brown;
+      font-family: Lato;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+}
+
+.title-politics{
+  margin: 2% 0 0 0;
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1.6px;
+  text-align: left;
+  color: #000000;
+  .line-copy {
+    border-bottom: solid 3px #6093f2;
+  }
+}

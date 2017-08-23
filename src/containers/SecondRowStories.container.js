@@ -11,6 +11,7 @@ const SecondRowStories = ({mainStory, secondColStories }) => (
 )
 SecondRowStories.propTypes = {
 }
+//TODO- handle array
 const mapStateToProps = (state) => ({
     mainStory: state.secondRowArticles[0],
     secondColStories: state.secondRowArticles[1]

@@ -1,0 +1,71 @@
+.third-row-stories {
+  margin-top: 1% !important;
+  .first{
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    .description{
+      padding: 75% 0 0 2%;
+      font-family: Lato;
+      font-size: 34px;
+      font-weight: bold;
+      line-height: 1.18;
+      text-align: left;
+      color: #ffffff;
+      .author {
+        font-family: Lato;
+        font-size: 16px;
+        text-align: left;
+        color: #ffffff;
+        padding-bottom: 4%;
+      }
+    }
+  }
+  .second{
+    .description{
+      padding: 2% 0 0 2%;
+      font-family: Lato;
+      font-size: 24px;
+      line-height: 1.42;
+      text-align: left;
+      color: #222222;
+      .author {
+        font-family: Lato;
+        font-size: 14px;
+        text-align: left;
+        color: #818181;
+        padding-bottom: 4%;
+      }
+    }
+    .story-one{
+      background-color: white;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    }
+    .story-two{
+      background-color: white;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+      margin: 3% 0 0 0;
+    }
+  }
+  .third{
+    .story{
+      padding-bottom: 3%;
+      .description{
+        font-family: Lato;
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 1.45;
+        text-align: left;
+        color: #222222;
+        .author{
+          padding: 2% 0 2% 0;
+          font-family: Lato;
+          font-size: 14px;
+          text-align: left;
+          color: #818181;
+        }
+      }
+      .end-line {
+        border: solid 1px #d8d8d8;
+      }
+    }
+  }
+}

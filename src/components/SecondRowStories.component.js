@@ -28,6 +28,31 @@ const SecondRowStoriesComponent  = ({mainStory, secondColStories}) => {
                 </div>
             </div>
             <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 no-padding padding-left-2">
+                {/* this can be looped - Keeping it  */}
+                <div className="story">
+                    <div className="section">
+                        <span className="line-copy">{!!mainStory?mainStory.sectionName:''}</span>
+                    </div>
+                    <div className="description">
+                        {!!mainStory?mainStory.headLine:''}
+                        <div className="author">
+                            {!!mainStory?mainStory.authorName:''}
+                        </div>
+                    </div>
+                    <div className="end-line"></div>
+                </div>
+                <div className="story">
+                    <div className="section">
+                        <span className="line-copy">{!!mainStory?mainStory.sectionName:''}</span>
+                    </div>
+                    <div className="description">
+                        {!!mainStory?mainStory.headLine:''}
+                        <div className="author">
+                            {!!mainStory?mainStory.authorName:''}
+                        </div>
+                    </div>
+                    <div className="end-line"></div>
+                </div>
                 <div className="story">
                     <div className="section">
                         <span className="line-copy">{!!mainStory?mainStory.sectionName:''}</span>
