@@ -1,19 +1,115 @@
-.second-row-stories{
+.second-row-stories {
   margin-top: 2% !important;
-  .main-article-img{
-    width:100%;
+  .first {
+    background-color: white;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+  }
+  .main-article-img {
+    width: 100%;
     height: 100%;
   }
-  .story-title{
-    margin: 2% 0 0 4%;
-    font-family: Lato;
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 1.6px;
-    text-align: left;
-    color: #000000;
-    .line-copy{
-      border-bottom: solid 3px #f26c60;
+  .story {
+    .section {
+      font-family: Lato;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 1.6px;
+      text-align: left;
+      color: #000000;
+      .line-copy {
+        border-bottom: solid 3px #f26c60;
+      }
+    }
+    .description {
+      padding: 0;
+      font-family: Lato;
+      font-size: 22px;
+      font-weight: bold;
+      line-height: 1.45;
+      text-align: left;
+      color: #222222;
+      .author {
+        font-family: Lato;
+        font-size: 14px;
+        text-align: left;
+        color: #818181;
+      }
+    }
+    .end-line {
+      border: solid 1px #d8d8d8;
+    }
+  }
+  .main-story {
+    padding: 2% 0 0 4%;
+    .section {
+      font-family: Lato;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 1.6px;
+      text-align: left;
+      color: #000000;
+      .line-copy {
+        border-bottom: solid 3px #f26c60;
+      }
+    }
+    .title {
+      font-family: Lato;
+      font-size: 24px;
+      line-height: 1.33;
+      text-align: left;
+      color: #222222;
+    }
+    .description {
+      font-family: Lora;
+      font-size: 14px;
+      line-height: 1.57;
+      text-align: left;
+      color: #5c5c5c;
+    }
+    .author {
+      font-family: Lato;
+      font-size: 16px;
+      text-align: left;
+      color: #818181;
+    }
+  }
+  .ad-area {
+    .quin-image {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+    .sub-news-letter {
+      height: 100%;
+      background-color: #2f73e4;
+      text-align: center;
+      .sub-icon {
+        padding-top: 5%;
+      }
+      .sub-text {
+        padding: 4% 0px 4% 0px;
+        font-family: Lato;
+        font-size: 20px;
+        line-height: 1.4;
+        color: #ffffff;
+      }
+      input {
+        border-radius: 4px;
+        background-color: #ffffff;
+      }
+      .button-div{
+        padding: 4% 0px 4% 0px;
+        button {
+          border-radius: 100px;
+          border: solid 1.5px #ffffff;
+          background-color: #2f73e4;
+          font-family: Lato;
+          font-size: 16px;
+          font-weight: 500;
+          text-align: center;
+          color: #ffffff;
+        }
+      }
     }
   }
 }

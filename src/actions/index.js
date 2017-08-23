@@ -20,4 +20,16 @@ export const loadStories = () => dispatch => {
         .catch( e => console.log(e))
 }
 
+export const extractData = (arrayObject) => {
+    let extractedData = arrayObject.map((object) =>{
+        return {
+            sectionName:!!object.sections?object.sections[0].name:'',
+            imgSrc:'http://quintype-01.imgix.net/' + object['hero-image-s3-key'],
+            headLine: object['headline'],
+            authorName: object['author-name'],
+            publishedAt: new Date(object['published-at']).getDay()
+        }
+    })
+    return extractedData
+}
 

@@ -57,13 +57,7 @@ class App extends Component {
 }
 
 const mapStateToProps = state => {
-  return {
-      imgSrc:'http://quintype-01.imgix.net/' + state.mainArticle['hero-image-s3-key'],
-      headLine: state.mainArticle['headline'],
-      sectionName: !!state.mainArticle['sections']?state.mainArticle['sections'][0].name:'',
-      authorName: state.mainArticle['author-name'],
-      publishedAt: new Date(state.mainArticle['published-at']).getDay()
-  }
+  return state.mainArticle[0]
 }
 
 export default connect(mapStateToProps)(App)
