@@ -1,0 +1,59 @@
+.fourth-row-stories {
+  margin-top: 1% !important; }
+  .fourth-row-stories .first {
+    padding: 0 2% 0 0; }
+    .fourth-row-stories .first .story {
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1); }
+      .fourth-row-stories .first .story .image .side-image {
+        width: 100%; }
+      .fourth-row-stories .first .story .content {
+        background-color: white; }
+        .fourth-row-stories .first .story .content .header {
+          padding: 0 0 0 3%;
+          font-family: Lato;
+          font-size: 22px;
+          line-height: 1.36;
+          text-align: left;
+          color: #222222; }
+        .fourth-row-stories .first .story .content .author {
+          padding: 1% 0 0 3%;
+          font-family: Lato;
+          font-size: 16px;
+          text-align: left;
+          color: #818181; }
+  .fourth-row-stories .second {
+    padding-left: 2%;
+    background-color: white;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1); }
+    .fourth-row-stories .second .main-article-img {
+      width: 100%;
+      height: 100%; }
+    .fourth-row-stories .second .main-story {
+      padding: 2% 0 0 4%; }
+      .fourth-row-stories .second .main-story .section {
+        font-family: Lato;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 1.6px;
+        text-align: left;
+        color: #000000; }
+        .fourth-row-stories .second .main-story .section .line-copy {
+          border-bottom: solid 3px #f26c60; }
+      .fourth-row-stories .second .main-story .title {
+        font-family: Lato;
+        font-size: 24px;
+        line-height: 1.33;
+        text-align: left;
+        color: #222222; }
+      .fourth-row-stories .second .main-story .description {
+        font-family: Lora;
+        font-size: 14px;
+        line-height: 1.57;
+        text-align: left;
+        color: #5c5c5c; }
+      .fourth-row-stories .second .main-story .author {
+        padding-bottom: 1%;
+        font-family: Lato;
+        font-size: 16px;
+        text-align: left;
+        color: #818181; }

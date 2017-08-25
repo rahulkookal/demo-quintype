@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import {loadStories } from '../actions'
 import SecondRowStories from './SecondRowStories.container'
 import ThirdRowStories from './ThirdRowStories.container'
+import FourthRowStories from './FourthRowStories.container'
+import RecentStories from './RecentStories.container'
 import './App.css'
 
 class App extends Component {
@@ -12,7 +14,11 @@ class App extends Component {
 
   componentDidMount() {
     this.props.dispatch(loadStories());
+      window.addEventListener('scroll', this.handleScroll);
   }
+    handleScroll = (e) =>{
+      console.log(e);
+    }
 
   componentWillReceiveProps(nextProps) {
       console.log(nextProps)
@@ -52,7 +58,6 @@ class App extends Component {
                 </div>
             </div>
         </div>
-
         {/*second row stories*/}
         <SecondRowStories></SecondRowStories>
 
@@ -82,6 +87,16 @@ class App extends Component {
             <span className="line-copy">Politics</span>
         </div>
         <ThirdRowStories></ThirdRowStories>
+
+        <div className="title-politics">
+            <span className="line-copy">Food & Health</span>
+        </div>
+        <FourthRowStories></FourthRowStories>
+
+        <div className="title-politics">
+            <span className="line-copy">Recent Stories</span>
+        </div>
+        <RecentStories></RecentStories>
     </div>
     )
   }
