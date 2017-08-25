@@ -27,7 +27,7 @@ const SecondRowStoriesComponent  = ({mainStory, secondColStories}) => {
                     </div>
                 </div>
             </div>
-            <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 no-padding padding-left-2">
+            <div className="second col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 no-padding">
                 {/* this can be looped - Keeping it  */}
                 <div className="story">
                     <div className="section">
@@ -66,7 +66,7 @@ const SecondRowStoriesComponent  = ({mainStory, secondColStories}) => {
                     <div className="end-line"></div>
                 </div>
             </div>
-            <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 no-padding padding-left-2">
+            <div className="third col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 no-padding">
                 <div className="ad-area">
                     <img src="img/group-2.png"
                          srcset="img/group-2@2x.png 2x,

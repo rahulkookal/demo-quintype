@@ -108,13 +108,13 @@ textarea {
 .header-text {
     padding-left: 2%;
     font-family: Lato;
-    font-size: 2.48vw;
+    font-size: 22px;
     font-weight: bold;
     text-align: left;
     color: #000000;
 }
 .search-img {
-    height: 2.48vw;
+    height: 22px;
     float: right;
     padding-right: 2%;
 }
@@ -184,7 +184,18 @@ textarea {
 }
 .menu-icon{
     padding: 0 0 0 2%;
-    font-size:2.48vw;
+    font-size: 22px;
+}
+@media screen and (max-width: 767px) {
+    .content-container {
+        margin: 0 0 0 0;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .content-container {
+        margin: 0 0 0 0;
+    }
 }
 
 

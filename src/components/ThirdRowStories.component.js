@@ -20,7 +20,7 @@ const ThirdRowStoriesComponent  = ({mainStory, secondColStories}) => {
                     </div>
                 </div>
             </div>
-            <div className="second col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 no-padding padding-left-2">
+            <div className="second col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 no-padding">
                 <div className="story-one">
                     <img alt="" src={!!mainStory?mainStory.imgSrc:''} className="main-article-img"></img>
                     <div className="description">
@@ -40,7 +40,7 @@ const ThirdRowStoriesComponent  = ({mainStory, secondColStories}) => {
                 </div>
 
             </div>
-            <div className="third col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 no-padding padding-left-2">
+            <div className="third col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 no-padding">
                 {/* To Do Repeat this from React-Redux*/}
                 <div className="story">
                     <div className="description">

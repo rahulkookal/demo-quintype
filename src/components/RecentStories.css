@@ -13,6 +13,12 @@
     color: #000000; }
   .recent-stories-container .recent-stories {
     padding: 0 0 1% 1%; }
+    @media screen and (max-width: 767px) {
+      .recent-stories-container .recent-stories {
+        padding: 0 2% 0 2%; } }
+    @media screen and (max-width: 992px) {
+      .recent-stories-container .recent-stories {
+        padding: 0 2% 0 2%; } }
     .recent-stories-container .recent-stories .first .story .image .side-image {
       width: 100%;
       height: 100%; }

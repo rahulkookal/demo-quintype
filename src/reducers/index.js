@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { INITIAL_LOAD ,extractData
+import { INITIAL_LOAD ,UPDATE_STORIES, extractData
 } from '../actions'
 const pageLoadedDetails = (state = {}, action) =>{
     switch (action.type) {
@@ -7,6 +7,11 @@ const pageLoadedDetails = (state = {}, action) =>{
             return {
               loadedStories:20,
               offset:20
+            }
+        case UPDATE_STORIES:
+            return {
+                loadedStories: state.loadedStories + state.offset ,
+                offset:20
             }
         default:
             return state
@@ -41,6 +46,8 @@ const recentStories = (state = {}, action) =>{
     switch (action.type) {
         case INITIAL_LOAD:
             return extractData(action.stories.splice(0,12))
+        case UPDATE_STORIES:
+            return state.concat(extractData(action.stories))
         default:
             return state
     }

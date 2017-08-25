@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 import RecentStoriesComponent from '../components/RecentStories.component'
 
 const RecentStories = ({stories }) => (
-    <RecentStoriesComponent mainStory={stories}/>
+    <RecentStoriesComponent mainStory={stories} />
 )
 RecentStories.propTypes = {
 }

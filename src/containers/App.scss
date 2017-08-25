@@ -2,12 +2,6 @@
   margin-top: 2% !important;
   text-align: center;
   background-color: brown;
-  @media screen and (max-width: 767px) {
-    //Mobile design
-  }
-  @media screen and (max-width: 992px) {
-    //Tab design
-  }
   .title{
     padding: 2% 0 0 0;
     font-family: Lato;
@@ -51,6 +45,13 @@
 }
 
 .title-politics{
+  @media screen and (max-width: 767px) {
+    padding-left:2%;
+  }
+
+  @media screen and (max-width: 992px) {
+    padding-left:2%;
+  }
   margin: 2% 0 0 0;
   font-family: Lato;
   font-size: 18px;

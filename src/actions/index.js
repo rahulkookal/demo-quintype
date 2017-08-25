@@ -1,11 +1,13 @@
-export const REQUEST_POSTS = 'REQUEST_POSTS'
-export const RECEIVE_POSTS = 'RECEIVE_POSTS'
-export const SELECT_REDDIT = 'SELECT_REDDIT'
-export const INVALIDATE_REDDIT = 'INVALIDATE_REDDIT'
 export const INITIAL_LOAD = 'INITIAL_LOAD'
+export const UPDATE_STORIES = 'UPDATE_STORIES'
 
 export const requestStories = stories => ({
     type: INITIAL_LOAD,
+    stories
+})
+
+export const updateStoryList = stories => ({
+    type: UPDATE_STORIES,
     stories
 })
 
@@ -20,8 +22,16 @@ export const loadStories = () => dispatch => {
         .catch( e => console.log(e))
 }
 
-export const loadMoreStories = (prop) => dispatch => {
-    console.log(prop)
+export const loadMoreStories = (props) => dispatch => {
+    console.log(props)
+    let {loadedStories, offset} = props,
+        targetUrl = 'https://rio.quintype.io/api/v1/stories?limit='+loadedStories+'&offset='+offset
+    console.log(loadedStories +" "+offset);
+    let proxyUrl = 'https://cors-anywhere.herokuapp.com/'
+    return fetch(proxyUrl + targetUrl)
+        .then(response => response.json())
+        .then(json => dispatch(updateStoryList(json.stories)))
+        .catch( e => console.log(e))
 }
 
 export const extractData = (arrayObject) => {

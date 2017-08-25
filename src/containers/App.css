@@ -45,5 +45,11 @@
   letter-spacing: 1.6px;
   text-align: left;
   color: #000000; }
+  @media screen and (max-width: 767px) {
+    .title-politics {
+      padding-left: 2%; } }
+  @media screen and (max-width: 992px) {
+    .title-politics {
+      padding-left: 2%; } }
   .title-politics .line-copy {
     border-bottom: solid 3px #6093f2; }

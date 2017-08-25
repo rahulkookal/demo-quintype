@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 //import $ from 'jquery';
 //import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import $ from 'jquery'
 import {loadStories, loadMoreStories} from '../actions'
 import SecondRowStories from './SecondRowStories.container'
 import ThirdRowStories from './ThirdRowStories.container'
@@ -13,26 +14,25 @@ class App extends Component {
   static propTypes = {
   }
 
+  handleScollEvent = ()=> {
+      if($(window).scrollTop() + $(window).height() === $(document).height()) {
+          console.log(this);
+          this.props.dispatch(loadMoreStories(this.props));
+      }
+    }
+
   componentDidMount() {
     this.props.dispatch(loadStories());
-      loadMoreStories();
+    window.addEventListener('scroll', this.handleScollEvent);
   }
+
 
   componentWillReceiveProps(nextProps) {
       console.log(nextProps)
   }
 
-  handleChange = nextReddit => {
-
-  }
-
-  handleRefreshClick = e => {
-    e.preventDefault()
-    //const { dispatch} = this.props
-  }
-
   render() {
-    const { imgSrc, headLine, sectionName, authorName, publishedAt} = this.props
+      const { imgSrc, headLine, sectionName, authorName, publishedAt} = this.props
     return (
     <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 no-padding">
         {/*Main Story Shown on top*/}
@@ -48,7 +48,7 @@ class App extends Component {
                 <div className="story-description">{headLine}</div>
                 <div className="auther-details row">
                     <div className="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 no-padding">
-                        <img alt="" className="search-img" src="img/search-blue.png" srcset="img/search-blue@2x.png 1000w, img/search-blue@3x.png 2000w"></img>
+                        <img alt="" className="search-img" src="img/search-blue.png" srcSet="img/search-blue@2x.png 1000w, img/search-blue@3x.png 2000w"></img>
                     </div>
                     <div className="auther-name">{authorName}<br/>
                         <span className="posted-details">Posted {publishedAt}</span>
@@ -98,7 +98,10 @@ class App extends Component {
 }
 
 const mapStateToProps = state => {
-  return state.mainArticle[0]
+  return {
+      ...state.mainArticle[0],
+      ...state.pageLoadedDetails
+  }
 }
 
 export default connect(mapStateToProps)(App)

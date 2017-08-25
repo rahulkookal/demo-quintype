@@ -2,6 +2,13 @@
   margin-top: 1% !important;
 
   .first{
+    @media screen and (max-width: 767px) {
+      padding-right:0%;
+    }
+
+    @media screen and (max-width: 992px) {
+      padding-right:0%;
+    }
 
     padding: 0 2% 0 0;
 
@@ -39,7 +46,6 @@
   }
 
   .second {
-    padding-left: 2%;
     background-color: white;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
 

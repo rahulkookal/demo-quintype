@@ -8,38 +8,51 @@
     width: 100%;
     height: 100%;
   }
-  .story {
-    padding: 0 0 5% 0;
-    .section {
-      font-family: Lato;
-      font-size: 18px;
-      font-weight: bold;
-      letter-spacing: 1.6px;
-      text-align: left;
-      color: #000000;
-      .line-copy {
-        border-bottom: solid 3px #f26c60;
-      }
+  .second{
+
+    @media screen and (max-width: 767px) {
+      padding-left:0%;
     }
-    .description {
-      padding: 1% 0 1% 0;
-      font-family: Lato;
-      font-size: 22px;
-      font-weight: bold;
-      line-height: 1.45;
-      text-align: left;
-      color: #222222;
-      .author {
+
+    @media screen and (max-width: 992px) {
+      padding-left:1%;
+    }
+
+    padding-left: 2%;
+    .story {
+      padding: 2% 0 2% 0;
+      .section {
         font-family: Lato;
-        font-size: 14px;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 1.6px;
         text-align: left;
-        color: #818181;
+        color: #000000;
+        .line-copy {
+          border-bottom: solid 3px #f26c60;
+        }
       }
-    }
-    .end-line {
-      border: solid 1px #d8d8d8;
+      .description {
+        padding: 1% 0 1% 0;
+        font-family: Lato;
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 1.45;
+        text-align: left;
+        color: #222222;
+        .author {
+          font-family: Lato;
+          font-size: 14px;
+          text-align: left;
+          color: #818181;
+        }
+      }
+      .end-line {
+        border: solid 1px #d8d8d8;
+      }
     }
   }
+
   .main-story {
     padding: 2% 0 0 4%;
     .section {
@@ -74,43 +87,63 @@
       color: #818181;
     }
   }
-  .ad-area {
-    .quin-image {
-      object-fit: contain;
-      width: 100%;
-      height: 100%;
+  .third{
+    @media screen and (max-width: 767px) {
+      padding-left:0;
     }
-    .sub-news-letter {
-      height: 100%;
-      background-color: #2f73e4;
-      text-align: center;
-      .sub-icon {
-        padding-top: 5%;
+
+    @media screen and (max-width: 992px) {
+      padding-left:1%;
+    }
+    padding-left: 2%;
+    .ad-area {
+      .quin-image {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
       }
-      .sub-text {
-        padding: 4% 0px 4% 0px;
-        font-family: Lato;
-        font-size: 20px;
-        line-height: 1.4;
-        color: #ffffff;
-      }
-      input {
-        border-radius: 4px;
-        background-color: #ffffff;
-      }
-      .button-div{
-        padding: 4% 0px 4% 0px;
-        button {
-          border-radius: 100px;
-          border: solid 1.5px #ffffff;
-          background-color: #2f73e4;
+      .sub-news-letter {
+        height: 100%;
+        background-color: #2f73e4;
+        text-align: center;
+        .sub-icon {
+          padding-top: 5%;
+        }
+        .sub-text {
+          padding: 4% 0px 4% 0px;
           font-family: Lato;
-          font-size: 16px;
-          font-weight: 500;
-          text-align: center;
+          font-size: 20px;
+          line-height: 1.4;
           color: #ffffff;
+        }
+        input {
+          border-radius: 4px;
+          background-color: #ffffff;
+        }
+        .button-div{
+          padding: 4% 0px 4% 0px;
+          button {
+            border-radius: 100px;
+            border: solid 1.5px #ffffff;
+            background-color: #2f73e4;
+            font-family: Lato;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            color: #ffffff;
+          }
         }
       }
     }
+
+  }
+
+
+  @media screen and (max-width: 767px) {
+    padding:0 2% 2% 2%;
+  }
+
+  @media screen and (max-width: 992px) {
+    padding:0% 2% 2% 2%;
   }
 }

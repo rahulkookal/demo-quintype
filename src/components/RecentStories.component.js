@@ -33,7 +33,6 @@ const RecentStoriesComponent  = ({mainStory}) => {
                             </div>
                     })
                 }
-
             </div>
         </div>
     )
