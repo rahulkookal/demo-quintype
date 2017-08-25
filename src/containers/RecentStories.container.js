@@ -6,15 +6,14 @@ import React from 'react'
 import { connect } from 'react-redux'
 import RecentStoriesComponent from '../components/RecentStories.component'
 
-const RecentStories = ({mainStory, secondColStories }) => (
-    <RecentStoriesComponent mainStory={mainStory} secondColStories={secondColStories}/>
+const RecentStories = ({stories }) => (
+    <RecentStoriesComponent mainStory={stories}/>
 )
 RecentStories.propTypes = {
 }
 //TODO- handle array
 const mapStateToProps = (state) => ({
-    mainStory: state.thirdRowArticles[0],
-    secondColStories: state.thirdRowArticles[1]
+    stories: state.recentStories
 })
 
 export default connect(

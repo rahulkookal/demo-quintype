@@ -20,6 +20,10 @@ export const loadStories = () => dispatch => {
         .catch( e => console.log(e))
 }
 
+export const loadMoreStories = (prop) => dispatch => {
+    console.log(prop)
+}
+
 export const extractData = (arrayObject) => {
     let extractedData = arrayObject.map((object) =>{
         return {

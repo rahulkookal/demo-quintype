@@ -36,11 +36,21 @@ const thirdRowArticles = (state = {}, action) =>{
             return state
     }
 }
+
+const recentStories = (state = {}, action) =>{
+    switch (action.type) {
+        case INITIAL_LOAD:
+            return extractData(action.stories.splice(0,12))
+        default:
+            return state
+    }
+}
 const rootReducer = combineReducers({
     pageLoadedDetails,
     mainArticle,
     secondRowArticles,
-    thirdRowArticles
+    thirdRowArticles,
+    recentStories
 })
 
 export default rootReducer

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import $ from 'jquery';
+//import $ from 'jquery';
 //import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import {loadStories } from '../actions'
+import {loadStories, loadMoreStories} from '../actions'
 import SecondRowStories from './SecondRowStories.container'
 import ThirdRowStories from './ThirdRowStories.container'
 import FourthRowStories from './FourthRowStories.container'
@@ -15,11 +15,8 @@ class App extends Component {
 
   componentDidMount() {
     this.props.dispatch(loadStories());
-   // window.addEventListener('scroll', this.handleScroll);
+      loadMoreStories();
   }
-    handleScroll = (e) =>{
-      console.log(e);
-    }
 
   componentWillReceiveProps(nextProps) {
       console.log(nextProps)
