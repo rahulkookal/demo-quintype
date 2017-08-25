@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import $ from 'jquery';
 //import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import {loadStories } from '../actions'
@@ -14,7 +15,7 @@ class App extends Component {
 
   componentDidMount() {
     this.props.dispatch(loadStories());
-      window.addEventListener('scroll', this.handleScroll);
+   // window.addEventListener('scroll', this.handleScroll);
   }
     handleScroll = (e) =>{
       console.log(e);
@@ -93,9 +94,6 @@ class App extends Component {
         </div>
         <FourthRowStories></FourthRowStories>
 
-        <div className="title-politics">
-            <span className="line-copy">Recent Stories</span>
-        </div>
         <RecentStories></RecentStories>
     </div>
     )

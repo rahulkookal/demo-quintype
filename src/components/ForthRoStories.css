@@ -5,7 +5,8 @@
     .fourth-row-stories .first .story {
       box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1); }
       .fourth-row-stories .first .story .image .side-image {
-        width: 100%; }
+        width: 100%;
+        height: 100%; }
       .fourth-row-stories .first .story .content {
         background-color: white; }
         .fourth-row-stories .first .story .content .header {

@@ -5,10 +5,9 @@ import React from 'react'
 //import PropTypes from 'prop-types'
 import './ForthRoStories.css';
 
-const FourthRowStoriesComponent  = ({mainStory, secondColStories}) => {
+const FourthRowStoriesComponent  = ({mainStory}) => {
     return (
         <div className="row no-margin fourth-row-stories">
-
             <div className="first col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <div className="row story no-margin">
                     <div className="image col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 no-padding">

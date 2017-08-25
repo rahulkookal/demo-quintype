@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux'
-//import extractData from '../actions/extractData'
 import { INITIAL_LOAD ,extractData
 } from '../actions'
 const pageLoadedDetails = (state = {}, action) =>{
