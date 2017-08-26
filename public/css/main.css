@@ -137,6 +137,7 @@ textarea {
 }
 
 .auther-name {
+    padding-left: 1%;
     font-family: Lato;
     font-size: 18px;
     text-align: left;

@@ -14,6 +14,7 @@ export const updateStoryList = stories => ({
 
 export const loadStories = () => dispatch => {
     //Should be replace with hosting proxy server server
+    // Handling  the no-cors issue
     let proxyUrl = 'https://cors-anywhere.herokuapp.com/',
         targetUrl = `https://rio.quintype.io/api/v1/stories`
     return fetch(proxyUrl + targetUrl)

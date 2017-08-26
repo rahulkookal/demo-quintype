@@ -2,7 +2,7 @@
  * Created by rahulkookal on 23/8/17.
  */
 import React from 'react'
-//import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import './ThirdRowStories.css';
 
 const ThirdRowStoriesComponent  = ({mainStory, secondColStories}) => {
@@ -84,6 +84,7 @@ const ThirdRowStoriesComponent  = ({mainStory, secondColStories}) => {
 }
 
 ThirdRowStoriesComponent.propTypes = {
+    mainStory:PropTypes.object.isRequired
 }
 
 export default ThirdRowStoriesComponent

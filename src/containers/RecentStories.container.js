@@ -2,16 +2,16 @@
  * Created by rahulkookal on 25/8/17.
  */
 import React from 'react'
-//import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import RecentStoriesComponent from '../components/RecentStories.component'
 
 const RecentStories = ({stories }) => (
-    <RecentStoriesComponent mainStory={stories} />
+    <RecentStoriesComponent stories={stories} />
 )
 RecentStories.propTypes = {
+    stories: PropTypes.array.isRequired
 }
-//TODO- handle array
 const mapStateToProps = (state) => ({
     stories: state.recentStories
 })

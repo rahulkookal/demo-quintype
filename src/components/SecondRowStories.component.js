@@ -2,7 +2,7 @@
  * Created by rahulkookal on 22/8/17.
  */
 import React from 'react'
-//import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import './SecondRowStories.css';
 
 const SecondRowStoriesComponent  = ({mainStory}) => {
@@ -92,6 +92,7 @@ const SecondRowStoriesComponent  = ({mainStory}) => {
 }
 
 SecondRowStoriesComponent.propTypes = {
+    mainStory:PropTypes.object.isRequired
 }
 
 export default SecondRowStoriesComponent
