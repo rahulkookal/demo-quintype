@@ -21,11 +21,11 @@
   }
   .second{
     @media screen and (max-width: 767px) {
-      padding-left: 0;
+      padding: 2% 0 0 0;
     }
 
     @media screen and (max-width: 992px) {
-      padding-left: 0;
+      padding: 2% 0 0 0;
     }
     padding-left: 2%;
     .description{
@@ -55,11 +55,11 @@
   }
   .third{
     @media screen and (max-width: 767px) {
-      padding-left: 0;
+      padding: 2% 0 0 0;
     }
 
     @media screen and (max-width: 992px) {
-      padding-left: 0;
+      padding: 2% 0 0 0;
     }
     padding-left: 2%;
     .story{

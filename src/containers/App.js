@@ -13,26 +13,18 @@ import './App.css'
 class App extends Component {
   static propTypes = {
   }
-
   handleScollEvent = ()=> {
       if($(window).scrollTop() + $(window).height() === $(document).height()) {
-          console.log(this);
           this.props.dispatch(loadMoreStories(this.props));
       }
-    }
+  }
 
   componentDidMount() {
     this.props.dispatch(loadStories());
     window.addEventListener('scroll', this.handleScollEvent);
   }
-
-
-  componentWillReceiveProps(nextProps) {
-      console.log(nextProps)
-  }
-
   render() {
-      const { imgSrc, headLine, sectionName, authorName, publishedAt} = this.props
+    const { imgSrc, headLine, sectionName, authorName, publishedAt} = this.props
     return (
     <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 no-padding">
         {/*Main Story Shown on top*/}
@@ -47,7 +39,7 @@ class App extends Component {
                 <div className="story-headline">{headLine}</div>
                 <div className="story-description">{headLine}</div>
                 <div className="auther-details row">
-                    <div className="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 no-padding">
+                    <div className="author-icon col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 no-padding">
                         <img alt="" className="search-img" src="img/search-blue.png" srcSet="img/search-blue@2x.png 1000w, img/search-blue@3x.png 2000w"></img>
                     </div>
                     <div className="auther-name">{authorName}<br/>
@@ -59,7 +51,7 @@ class App extends Component {
         {/*second row stories*/}
         <SecondRowStories></SecondRowStories>
 
-        {/*Banner*/}
+        {/*Carosol*/}
         <div className="must-reads">
             <div className="title">Must Reads</div>
             <div className="description">
@@ -84,6 +76,7 @@ class App extends Component {
         <div className="title-politics">
             <span className="line-copy">Politics</span>
         </div>
+
         <ThirdRowStories></ThirdRowStories>
 
         <div className="title-politics">

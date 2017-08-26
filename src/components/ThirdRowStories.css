@@ -20,10 +20,10 @@
     padding-left: 2%; }
     @media screen and (max-width: 767px) {
       .third-row-stories .second {
-        padding-left: 0; } }
+        padding: 2% 0 0 0; } }
     @media screen and (max-width: 992px) {
       .third-row-stories .second {
-        padding-left: 0; } }
+        padding: 2% 0 0 0; } }
     .third-row-stories .second .description {
       padding: 2% 0 0 2%;
       font-family: Lato;
@@ -48,10 +48,10 @@
     padding-left: 2%; }
     @media screen and (max-width: 767px) {
       .third-row-stories .third {
-        padding-left: 0; } }
+        padding: 2% 0 0 0; } }
     @media screen and (max-width: 992px) {
       .third-row-stories .third {
-        padding-left: 0; } }
+        padding: 2% 0 0 0; } }
     .third-row-stories .third .story {
       padding-bottom: 3%; }
       .third-row-stories .third .story .description {

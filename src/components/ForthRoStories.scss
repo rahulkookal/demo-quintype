@@ -11,8 +11,11 @@
     }
 
     padding: 0 2% 0 0;
-
+    div:last-child {
+      padding-bottom: 0;
+    }
     .story{
+      padding-bottom: 1%;
       box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
       .image{
 

@@ -22,6 +22,32 @@ const FourthRowStoriesComponent  = ({mainStory}) => {
                         </div>
                     </div>
                 </div>
+                <div className="row story no-margin">
+                    <div className="image col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 no-padding">
+                        <img alt="" src={!!mainStory?mainStory.imgSrc:''} className="side-image"></img>
+                    </div>
+                    <div className="content col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 no-padding">
+                        <div className="header">
+                            {!!mainStory?mainStory.headLine:''}
+                        </div>
+                        <div className="author">
+                            {!!mainStory?mainStory.authorName:''}
+                        </div>
+                    </div>
+                </div>
+                <div className="row story no-margin">
+                    <div className="image col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 no-padding">
+                        <img alt="" src={!!mainStory?mainStory.imgSrc:''} className="side-image"></img>
+                    </div>
+                    <div className="content col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 no-padding">
+                        <div className="header">
+                            {!!mainStory?mainStory.headLine:''}
+                        </div>
+                        <div className="author">
+                            {!!mainStory?mainStory.authorName:''}
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div className="second col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 no-padding">

@@ -17,10 +17,12 @@
     @media screen and (max-width: 992px) {
       padding-left:1%;
     }
-
+    div:last-child {
+      padding-bottom: 0;
+    }
     padding-left: 2%;
     .story {
-      padding: 2% 0 2% 0;
+      padding: 0 0 4% 0;
       .section {
         font-family: Lato;
         font-size: 18px;

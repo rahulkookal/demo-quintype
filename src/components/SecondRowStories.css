@@ -14,8 +14,10 @@
     @media screen and (max-width: 992px) {
       .second-row-stories .second {
         padding-left: 1%; } }
+    .second-row-stories .second div:last-child {
+      padding-bottom: 0; }
     .second-row-stories .second .story {
-      padding: 2% 0 2% 0; }
+      padding: 0 0 4% 0; }
       .second-row-stories .second .story .section {
         font-family: Lato;
         font-size: 18px;
