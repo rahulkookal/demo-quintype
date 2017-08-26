@@ -1,6 +1,14 @@
 import { combineReducers } from 'redux'
 import { INITIAL_LOAD ,UPDATE_STORIES, extractData
 } from '../actions'
+ /*
+ * Initially fetches 20 stories when App component mounts on DOM and Trigers
+ * INITIAL_LOAD dispatch from action.
+ * There is only 2 types of action.Type
+ * 1.INITIAL_LOAD - Distribute data to all component
+ * 2.UPDATE_STORIES - Update the RecentStories and pageLoadedDetails
+ */
+
 const pageLoadedDetails = (state = {}, action) =>{
     switch (action.type) {
         case INITIAL_LOAD:
@@ -17,6 +25,7 @@ const pageLoadedDetails = (state = {}, action) =>{
             return state
     }
 }
+
 const mainArticle = (state = {}, action) =>{
     switch (action.type) {
         case INITIAL_LOAD:
@@ -25,6 +34,7 @@ const mainArticle = (state = {}, action) =>{
             return state
     }
 }
+
 const secondRowArticles = (state = {}, action) =>{
     switch (action.type) {
         case INITIAL_LOAD:
@@ -33,6 +43,7 @@ const secondRowArticles = (state = {}, action) =>{
             return state
     }
 }
+
 const thirdRowArticles = (state = {}, action) =>{
     switch (action.type) {
         case INITIAL_LOAD:
@@ -52,6 +63,7 @@ const recentStories = (state = {}, action) =>{
             return state
     }
 }
+// Root Reducer
 const rootReducer = combineReducers({
     pageLoadedDetails,
     mainArticle,

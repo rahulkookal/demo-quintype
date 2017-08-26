@@ -1,3 +1,9 @@
+//Variable declaration goes here
+//This variable declaration supposed to be in global file.
+// Since its small project, keeping it locally.
+$background-white: #ffffff;
+$colour-black : #000;
+$font-lato: Lato;
 
 .author-icon{
   background-color: brown;
@@ -9,20 +15,20 @@
   background-color: brown;
   .title{
     padding: 2% 0 0 0;
-    font-family: Lato;
+    font-family: $font-lato;
     font-size: 34px;
     font-weight: bold;
     letter-spacing: -0.3px;
     text-align: center;
-    color: #ffffff;
+    color: $background-white;
   }
   .description{
     padding: 2% 0 2% 0;
-    font-family: Lato;
+    font-family: $font-lato;
     font-size: 38px;
     line-height: 1.32;
     text-align: center;
-    color: #ffffff;
+    color: $background-white;
     .left_arrow{
       float: left;
       padding-left: 2%;
@@ -37,14 +43,14 @@
     button {
       padding: 1% 1% 1% 1%;
       border-radius: 100px;
-      border: solid 1.5px #ffffff;
+      border: solid 1.5px $background-white;
       background-color: brown;
-      font-family: Lato;
+      font-family: $font-lato;
       font-size: 16px;
       font-weight: bold;
       letter-spacing: 2px;
       text-align: center;
-      color: #ffffff;
+      color: $background-white;
     }
   }
 }
@@ -58,12 +64,12 @@
     padding-left:2%;
   }
   margin: 2% 0 0 0;
-  font-family: Lato;
+  font-family: $font-lato;
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 1.6px;
   text-align: left;
-  color: #000000;
+  color: $colour-black;
   .line-copy {
     border-bottom: solid 3px #6093f2;
   }

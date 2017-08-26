@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-//import $ from 'jquery';
-//import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import $ from 'jquery'
 import {loadStories, loadMoreStories} from '../actions'
@@ -12,7 +11,13 @@ import './App.css'
 
 class App extends Component {
   static propTypes = {
+      imgSrc: PropTypes.string.isRequired,
+      headLine: PropTypes.string.isRequired,
+      sectionName: PropTypes.string.isRequired,
+      authorName: PropTypes.string.isRequired,
+      publishedAt: PropTypes.number,
   }
+
   handleScollEvent = ()=> {
       if($(window).scrollTop() + $(window).height() === $(document).height()) {
           this.props.dispatch(loadMoreStories(this.props));
@@ -78,17 +83,23 @@ class App extends Component {
         </div>
 
         <ThirdRowStories></ThirdRowStories>
-
+        {/*Fourth Row stories*/}
         <div className="title-politics">
             <span className="line-copy">Food & Health</span>
         </div>
-        <FourthRowStories></FourthRowStories>
 
+        <FourthRowStories></FourthRowStories>
+        {/*Recent stories*/}
         <RecentStories></RecentStories>
     </div>
     )
   }
 }
+/*
+* App is the main Root Component - all sub Component are inside App
+* Mainly holds the pageLoadedDetails for update url construction and Main story  detail to
+* Disply the story.
+*/
 
 const mapStateToProps = state => {
   return {

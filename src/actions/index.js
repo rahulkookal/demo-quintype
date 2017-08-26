@@ -23,11 +23,9 @@ export const loadStories = () => dispatch => {
 }
 
 export const loadMoreStories = (props) => dispatch => {
-    console.log(props)
     let {loadedStories, offset} = props,
-        targetUrl = 'https://rio.quintype.io/api/v1/stories?limit='+loadedStories+'&offset='+offset
-    console.log(loadedStories +" "+offset);
-    let proxyUrl = 'https://cors-anywhere.herokuapp.com/'
+        targetUrl = 'https://rio.quintype.io/api/v1/stories?limit='+loadedStories+'&offset='+offset,
+        proxyUrl = 'https://cors-anywhere.herokuapp.com/'
     return fetch(proxyUrl + targetUrl)
         .then(response => response.json())
         .then(json => dispatch(updateStoryList(json.stories)))
