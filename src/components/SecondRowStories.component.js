@@ -5,7 +5,7 @@ import React from 'react'
 //import PropTypes from 'prop-types'
 import './SecondRowStories.css';
 
-const SecondRowStoriesComponent  = ({mainStory, secondColStories}) => {
+const SecondRowStoriesComponent  = ({mainStory}) => {
     return (
         <div className="row no-margin second-row-stories">
             <div className="first col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 no-padding">
