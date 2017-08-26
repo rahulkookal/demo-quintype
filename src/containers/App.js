@@ -6,7 +6,7 @@ import {loadStories, loadMoreStories} from '../actions'
 import SecondRowStories from './SecondRowStories.container'
 import ThirdRowStories from './ThirdRowStories.container'
 import FourthRowStories from './FourthRowStories.container'
-import RecentStories from './RecentStories.container'
+// import RecentStories from './RecentStories.container'
 import './App.css'
 
 class App extends Component {
@@ -90,7 +90,7 @@ class App extends Component {
 
         <FourthRowStories></FourthRowStories>
         {/*Recent stories*/}
-        <RecentStories></RecentStories>
+        {/*<RecentStories></RecentStories>*/}
     </div>
     )
   }
