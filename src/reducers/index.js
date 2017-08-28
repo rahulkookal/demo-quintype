@@ -18,8 +18,8 @@ const pageLoadedDetails = (state = {}, action) =>{
             }
         case UPDATE_STORIES:
             return {
-                loadedStories: state.loadedStories + state.offset ,
-                offset:20
+                loadedStories: 20 ,
+                offset:state.loadedStories + state.offset
             }
         default:
             return state
